@@ -4,8 +4,10 @@ import 'antd/dist/antd.css';
 
 import EnvManageModle  from './models/EnvManageModle'
 import LayoutModle  from './models/LayoutModle'
+import SystemManageModle  from './models/SystemManageModle'
+import AccessRecordModle  from './models/AccessRecordModle'
 
-const models=[EnvManageModle,LayoutModle];
+const models=[EnvManageModle,LayoutModle,SystemManageModle,AccessRecordModle];
 
 // 1. Initialize
 const app = dva();

@@ -29,8 +29,8 @@ function AppLayout({
           style={{ height: '100%', borderRight: 0 }}
         >
          <Menu.Item key="1">Mock列表</Menu.Item>
-         <Menu.Item key="2">
-          <Link to="/123">调用记录</Link>
+         <Menu.Item key="accessRecord">
+          <Link to="/accessRecord">调用记录</Link>
          </Menu.Item>
          <Menu.Item key="envManage">
          <Link to="/envManage">环境管理</Link></Menu.Item>

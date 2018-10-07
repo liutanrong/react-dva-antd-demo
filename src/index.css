@@ -11,3 +11,9 @@ html, body, :global(#root) {
   margin: 16px 28px 16px 0;
   float: left;
 }
+
+.ant-table-body > ant-table-tbody  {
+    padding: 16px 16px;
+    word-break: break-word;
+    line-height: 0.8
+}
