@@ -1,11 +1,9 @@
 import React from 'react';
 import PropTypes from 'react';
 import { connect } from 'dva';
-import styles from './Layout.css';
 
-import { Layout, Menu, Breadcrumb, Icon } from 'antd';
+import { Layout, Menu } from 'antd';
 
-const { SubMenu } = Menu;
 const { Header, Content, Sider } = Layout;
 
 function AppLayout({

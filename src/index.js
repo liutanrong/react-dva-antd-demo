@@ -1,8 +1,10 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
 import dva from 'dva';
 import './index.css';
 import 'antd/dist/antd.css';
+
+import model1  from './models/EnvManage'
+
+const models=[model1];
 
 // 1. Initialize
 const app = dva();
@@ -12,7 +14,9 @@ const app = dva();
 
 // 3. Model
 // app.model(require('./models/example').default);
+// app.model(require('./models/EnvManage').default);
 
+models.forEach(m=>app.model(m).default)
 // 4. Router
 app.router(require('./router.js').default);
 
