@@ -4,10 +4,9 @@ import { Table } from 'antd';
 
 import Layout from '../layouts/Layout'
 
-require('../models/EnvManage')
 
 @connect(state => ({
-  EnvManage: state,
+  modle: state,
 }))
 
 export default class EnvModel extends Component {
@@ -53,14 +52,14 @@ export default class EnvModel extends Component {
 
 
   componentWillReceiveProps(newProps) {
-       if (newProps.EnvManage.envManage.envList!==this.state.envList) {
+       if (newProps.modle.envManageModle.envList!==this.state.envList) {
         this.setState(
-          {envList:newProps.EnvManage.envManage.envList}
+          {envList:newProps.modle.envManageModle.envList}
           )
        }
-       if (newProps.EnvManage.envManage.totalNum!==this.state.totalNum) {
+       if (newProps.modle.envManageModle.totalNum!==this.state.totalNum) {
         this.setState(
-          {totalNum:newProps.EnvManage.envManage.totalNum}
+          {totalNum:newProps.modle.envManageModle.totalNum}
           )
        }
   }
@@ -68,7 +67,7 @@ export default class EnvModel extends Component {
 
   getPage(){
     let t=this;
-    return (  <Table columns={t.state.columns} dataSource={t.state.envList} pagination={{ pageSize: 10,total:this.state.totalNum }} scroll={{ y: 240 }} />)
+    return (  <Table columns={t.state.columns} dataSource={t.state.envList} rowKey='id' pagination={{ pageSize: 10,total:this.state.totalNum }} scroll={{ y: 240 }} />)
   }
   render() {
 

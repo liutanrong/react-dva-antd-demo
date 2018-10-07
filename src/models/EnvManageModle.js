@@ -2,7 +2,7 @@ import {getEnvList} from '../services/EnvManageService';
 
 export default {
 
-  namespace: 'envManage',
+  namespace: 'envManageModle',
 
   state: {},
 

@@ -2,7 +2,7 @@ import dva from 'dva';
 import './index.css';
 import 'antd/dist/antd.css';
 
-import model1  from './models/EnvManage'
+import model1  from './models/EnvManageModle'
 
 const models=[model1];
 
