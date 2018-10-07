@@ -2,9 +2,10 @@ import dva from 'dva';
 import './index.css';
 import 'antd/dist/antd.css';
 
-import model1  from './models/EnvManageModle'
+import EnvManageModle  from './models/EnvManageModle'
+import LayoutModle  from './models/LayoutModle'
 
-const models=[model1];
+const models=[EnvManageModle,LayoutModle];
 
 // 1. Initialize
 const app = dva();

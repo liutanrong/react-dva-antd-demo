@@ -3,12 +3,16 @@ import PropTypes from 'react';
 import { connect } from 'dva';
 
 import { Layout, Menu } from 'antd';
+import { Link } from 'dva/router';
+
 
 const { Header, Content, Sider } = Layout;
 
+
 function AppLayout({
   content, currentkey, 
-}) {
+}) 
+{
 
   return (
     <Layout>
@@ -25,9 +29,14 @@ function AppLayout({
           style={{ height: '100%', borderRight: 0 }}
         >
          <Menu.Item key="1">Mock列表</Menu.Item>
-         <Menu.Item key="2">调用记录</Menu.Item>
-         <Menu.Item key="envManage">环境管理</Menu.Item>
-         <Menu.Item key="4">系统管理</Menu.Item>
+         <Menu.Item key="2">
+          <Link to="/123">调用记录</Link>
+         </Menu.Item>
+         <Menu.Item key="envManage">
+         <Link to="/envManage">环境管理</Link></Menu.Item>
+         <Menu.Item key="systemManage">
+          <Link to="/systemManage">系统管理</Link>
+         </Menu.Item>
         </Menu>
       </Sider>
       <Layout style={{ padding: '0 24px 24px' }}>

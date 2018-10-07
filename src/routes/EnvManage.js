@@ -7,7 +7,7 @@ import Layout from '../layouts/Layout'
 const columns = [{
         title: 'ID',
         dataIndex: 'id',
-          sorter: true,
+        sorter: true,
 
         width: 150,
       }, {
@@ -97,7 +97,7 @@ export default class EnvModel extends Component {
   render() {
 
     return (
-      <Layout currentkey="envModel" content={this.getPage()}/>
+      <Layout currentkey="envManage" content={this.getPage()}/>
     );
   }
 }
