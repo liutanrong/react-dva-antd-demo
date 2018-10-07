@@ -12,7 +12,9 @@ export default {
         if (location.pathname === '/envManage') {
           dispatch({ 
               type: 'getEnvList', 
-              payload: location.query || {},
+              payload: {
+                page:1
+              },
           })
         }
       })
@@ -33,7 +35,8 @@ export default {
           type: 'save',
           payload: {
             envList: data.data,
-            totalNum:data.total
+            totalNum:data.total,
+            currentPage:payload.page
           }
         })
       } else {
